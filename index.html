@@ -1,78 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Conteúdos Espíritas</title>
-  <style>
-    body {
-      background-color: #f9f9f9;
-      color: #333;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-    }
-    .container {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      padding: 30px;
-      max-width: 600px;
-      width: 100%;
-    }
-    h1 {
-      text-align: center;
-      color: #444;
-      margin-bottom: 25px;
-      font-size: 1.6em;
-    }
-    ul {
-      padding-left: 20px;
-      margin-bottom: 25px;
-    }
-    li {
-      margin-bottom: 10px;
-      line-height: 1.6;
-    }
-    a.main-link {
-      display: block;
-      text-align: center;
-      background-color: #4CAF50;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-    a.main-link:hover {
-      background-color: #45a049;
-    }
-    .footer {
-      margin-top: 20px;
-      text-align: center;
-      font-weight: bold;
-      color: #555;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de Dados</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <h1>LINK PARA CONTEÚDOS ESPÍRITAS</h1>
-    <ul>
-      <li><strong>Cadastro de Obras:</strong> Índice remissivo de mais de 100 obras espíritas seguras apresentando um resumo do conteúdo;</li>
-      <li><strong>Mapa Mental de Obras:</strong> Mapa esquemático do conteúdo de obras doutrinárias, permitindo consulta com 🔎 ou Ctrl+F;</li>
-      <li><strong>Lista de Palestras:</strong> Links para mais de 1.300 palestras, organizadas por tema. Cor <strong>AMARELA</strong>, temas morais; Cor <strong>VERDE</strong>, temas doutrinários; Cor <strong>ROSA</strong>, temas religiosos; Cor <strong>AZUL</strong>, movimento espírita;</li>
-      <li><strong>Minutagem de lives:</strong> Links para o momento dos conteúdos em lives.</li>
-      <li><strong>Esquemas de Palestras:</strong> Exemplos de esquemas de palestras;</li>
-      <li><strong>Spotify:</strong> Link para palestras no Spotify.</li>
-    </ul>
-    <a class="main-link" href="https://drive.google.com/drive/folders/1TfFAnfVLc5sW_2YNAtNdlS45BPPf3GoP" target="_blank">📂 Acessar Conteúdos Espíritas</a>
-    <div class="footer">Aproveite e Compartilhe!</div>
-  </div>
+    <header>
+        <div class="container">
+            <h1>JORGE ELARRAT</h1>
+        </div>
+        <div class="instructions">
+            <div class="container">
+                <h2 style="text-align: center">Acervo digital oficial de Jorge Elarrat</h2>
+                <div class="instructions-content">
+                    <div class="main-instructions">
+                        <p>Este site foi criado para organizar e facilitar o acesso ao vasto material de estudo produzido por Jorge Elarrat. Aqui você encontrará um acervo completo e pesquisável de palestras, mapas mentais e outros conteúdos doutrinários.</p>
+                        <br>
+                        <p>Navegue pelas abas abaixo para explorar:</p>
+                        <ul>
+                            <li><strong>Palestras:</strong> Um índice com mais de 1.400 palestras, com links diretos para o YouTube.</li>
+                            <li><strong>Mapas Mentais:</strong> Esquemas visuais de obras doutrinárias para facilitar a consulta e o estudo.</li>
+                            <li><strong>Minutagem de Lives:</strong> Encontre trechos específicos em transmissões ao vivo com links diretos para o momento exato do conteúdo.</li>
+                        </ul>
+                    </div>
+                    <div class="useful-links">
+                        <h3>Links Úteis:</h3>
+                        <a href="https://open.spotify.com/show/39OROy88Kmql4nC6AIA1qk?si=KNYVBSr6RAqhh69zS5A8yQ" target="_blank" class="link-util">Palestras no Spotify</a>
+                        <a href="https://fero.swgp.com.br/consulta/" target="_blank" class="link-util">Cadastro de Obras</a>
+                        <a href="https://drive.google.com/drive/folders/1OCLh5NvFh-FhiofOLCymgkcn1QcyQIPX" target="_blank" class="link-util">Agenda de Palestras</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div class="tabs" id="tabs">
+            <!-- conteúdo gerado dinamicamente por script.js -->
+        </div>
+
+        <div class="tab-content" id="tab-content">
+            <div id="loading" class="loading">
+                <span class="spinner"></span><br>Carregando dados...
+            </div>    
+            <!-- conteúdo gerado dinamicamente por script.js -->
+        </div>
+    </main>
+    <div class="creditos">
+        <p>Feito com ❤️ por <a href="https://github.com/DanielAwada/elarrat.com.br" target="_blank">Daniel Elarrat</a></p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
