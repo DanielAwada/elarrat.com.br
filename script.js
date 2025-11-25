@@ -20,6 +20,12 @@ const sheetConfigs = {
         columnsSearch: ["#", "ÁREA", "TEMA", "ENFOQUE"],
         columnsWide: ["#", "ÁREA", "TEMA", "ENFOQUE"],
         columnsSmall: ["#", "ENFOQUE"],
+    },
+    "Referências Bibliográficas": {
+        gid: "180889834",
+        columnsSearch: ["TEMA", "TITULO", "LOCAL", "IDEIA"],
+        columnsWide: ["TEMA", "TITULO", "LOCAL", "IDEIA"],
+        columnsSmall: ["TITULO", "LOCAL", "IDEIA"],
     }
 };
 
@@ -300,7 +306,9 @@ function filterAndRender(tabName, searchValue = '') {
                     link.textContent = cellContent;
                     td.appendChild(link);
                 } else {
-                    td.textContent = cellContent;
+                    const span = document.createElement('span')
+                    span.textContent = cellContent;
+                    td.appendChild(span);
                 }
                 tr.appendChild(td);
             });
@@ -316,7 +324,7 @@ function renderTable(tabName) {
 
 // Função auxiliar para obter as colunas baseadas no tamanho da tela
 function getColumnsForScreenSize(config) {
-    return window.innerWidth >= 768 ? config.columnsWide : config.columnsSmall;
+    return window.innerWidth >= 900 ? config.columnsWide : config.columnsSmall;
 }
 
 // Função auxiliar para normalizar texto (remover acentos e converter para minúsculas)
